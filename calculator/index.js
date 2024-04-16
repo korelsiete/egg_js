@@ -1,11 +1,19 @@
 // la función Number convierte el valor a un número si es posible
-const number1 = Number(prompt("Ingrese primer número"));
-const number2 = Number(prompt("Ingrese segundo número"));
+// const number1 = Number(prompt("Ingrese primer número"));
+// const number2 = Number(prompt("Ingrese segundo número"));
 
-const sum = number1 + number2;
-const messageSum = "El resultado de la suma es: " + sum;
+// const sum = number1 + number2;
+// const messageSum = "El resultado de la suma es: " + sum;
 
-alert(messageSum);
+const amount = Number(prompt("¿Cuántos números desea sumar?"));
+let sum = 0;
+
+for (let index = 0; index < amount; index++) {
+  const numberToSum = Number(prompt("Ingrese un número a sumar"));
+  sum = sum + numberToSum;
+}
+
+alert(sum);
 
 const average = sum / 2;
 const triple = average * 3;
