@@ -7,8 +7,6 @@ const producto1 = {
 producto1.id = "id123";
 producto1["foto"] = "./images/celular.png";
 
-console.log(producto1);
-
 class Product {
   constructor(id, title, price, stock, onSale, supplier) {
     this.id = id;
@@ -36,14 +34,13 @@ class Product {
   }
 }
 
-const celular1 = new Product();
-const celular2 = new Product(1, "Iphone", 500, 20);
-const celular3 = new Product(2, "Samsung", 500, 15, true);
-const celular4 = new Product(3, "Xiaomi-Pro", 350, 10, true, "Xiaomi");
-const celular5 = new Product(4, "Huawei", 350, 12, true, "Huawei");
+const prod1 = new Product(1, "Iphone", 500, 20, false, "Apple");
+const prod2 = new Product(2, "Samsung", 500, 15, true, "Samsung");
+const prod3 = new Product(3, "Xiaomi-Pro", 350, 10, true, "Xiaomi");
+const prod4 = new Product(4, "Huawei", 350, 12, true, "Huawei");
 
-celular4.supplier = "China";
-console.log(celular4.supplier);
+const products = [prod1, prod2, prod3, prod4];
 
-celular5.sellUnits(10);
-celular5.sellUnits(5);
+console.log(products);
+console.log(products[1]);
+console.log(products.at(-1).title);
