@@ -42,5 +42,7 @@ const prod4 = new Product(4, "Huawei", 350, 12, true, "Huawei");
 const products = [prod1, prod2, prod3, prod4];
 
 console.log(products);
-console.log(products[1]);
-console.log(products.at(-1).title);
+products.shift();
+console.log(products);
+products.pop();
+console.log(products);
