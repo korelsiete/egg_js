@@ -1,5 +1,3 @@
-const container = document.getElementById("container");
-
 const inputOnline = prompt("¿Está conectado el usuario?\nSI o NO", "SI");
 const isOnline = inputOnline?.toUpperCase() === "SI" ? true : false;
 const [nombre, edad, profesion, ubicacion, hobby] = [
@@ -10,14 +8,20 @@ const [nombre, edad, profesion, ubicacion, hobby] = [
   "Freestyle",
 ];
 
-const template = `\n
+function insertTemplate(element = "datos3") {
+  const container = document.getElementById(element);
+
+  const template = `\n
 Nombre: ${nombre}
 Edad: ${edad}
 Profesión: ${profesion}
 Ubicación: ${ubicacion}
 Hobby: ${hobby}`;
 
-container.textContent = `Estado del usuario: ${
-  isOnline ? "Activo" : "Inactivo"
-}`;
-isOnline && (container.textContent += template);
+  container.textContent = `Estado del usuario: ${
+    isOnline ? "Activo" : "Inactivo"
+  }`;
+  isOnline && (container.textContent += template);
+}
+
+insertTemplate("datos1");
